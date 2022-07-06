@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성공일정</title>
+    <meta name="author" content="LeeDongTak">
+    <meta name="keywords" content="성공일절, 일정관리, 업무 분배, 우선순위">
+    <meta name="description" content="중요도와 긴급성을 기존으로 우선 순의를 세위 성공일정을 만듭니다. ">
+
+    <!-- 파비콘 -->
+    <link rel="icon" href="./img/299110_check_sign_icon.ico" type="image/x-icon">
+    <!-- 아이폰 파비콘 -->
+    <link rel="apple-touch-icon" href="./img/299110_check_sign_icon.ico">
+
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/signup.css">
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <div class="header_container">
+                <div class="title">
+                    <a href="#" onclick="goUrl('index')">성공일정</a>
+                </div>
+                <!-- title -->
+                <div class="sign_container">
+                    <div class="unsigned">
+                        <div class="sign_in"><a href="#" onclick="goUrl('signin')">로그인</a></div>
+                        <div class="sign_up"><a href="#" onclick="goUrl('signup')">회원가입</a></div>
+                    </div>
+                    <!-- unsigned -->
+                    <div class="signed hidden">
+                        <div class="dropdown">
+                            <div class="dropdown_button">
+                                안녕하세요 <span class="nickname">홍길동</span>님
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                            <!-- dropdown_button -->
+                            <div class="dropdown_content">
+                                <button id="sign_out">로그아웃</button>
+                            </div>
+                            <!-- dropdownn_content -->
+                        </div>
+                        <!-- dropdown -->
+                    </div>
+                    <!-- signed -->
+                </div>
+                <!-- sign_container -->
+            </div>
+            <!-- header_container -->
+        </div>
+    </header>
+
+    <main>
+        <div class="inner">
+            <div class="signup_container">
+                <h1>안녕하세요 <span class="blue"> 성공일정</span>입니다. </h1>
+                <div class="signup_form">
+                    <input type="text" placeholder="이메일" id="email" />
+                    <div class="email_message message">
+                        이메일 형식으로 입력해 주세요
+                    </div>
+                    <input type="password" placeholder="비밀번호" id="password" />
+                    <div class="password_message message">
+                        영문, 숫자, 특수문자(!@$%^*)조함 8자 이상으로 입력
+                    </div>
+                    <input type="password" placeholder="비밀번호확인" id="password_confirm" />
+                    <div class="password_confirm_message message">
+                        바말번호가 맞지 않습니다. 
+                    </div>
+                    <input type="text" placeholder="닉네임" id="nickname" />
+                    <div class="nickname_message message">
+                        한글 or 영어 2 ~ 10자로 설정해주세요.
+                    </div>
+                    <input type="button" value="회원가입" placeholder="회원가입" id="signup" />
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="inner">
+            <div class="footer_container">
+                <div class="author">개발자 : 홍길동</div>
+                <div class="author_email">demmey@demmey.com</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js" integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/btlink.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/signup.js"></script>
+</body>
+</html>

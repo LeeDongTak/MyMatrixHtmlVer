@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성공일정</title>
+    <meta name="author" content="LeeDongTak">
+    <meta name="keywords" content="성공일절, 일정관리, 업무 분배, 우선순위">
+    <meta name="description" content="중요도와 긴급성을 기존으로 우선 순의를 세위 성공일정을 만듭니다. ">
+
+    <!-- 파비콘 -->
+    <link rel="icon" href="./img/299110_check_sign_icon.ico" type="image/x-icon">
+    <!-- 아이폰 파비콘 -->
+    <link rel="apple-touch-icon" href="./img/299110_check_sign_icon.ico">
+
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/jumbotron.css">
+    <link rel="stylesheet" href="./css/matrix.css">
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <div class="header_container">
+                <div class="title">
+                    <a href="#" onclick="goUrl('index')">성공일정</a>
+                </div>
+                <!-- title -->
+                <div class="sign_container">
+                    <div class="unsigned">
+                        <div class="sign_in"><a href="#" onclick="goUrl('signin')">로그인</a></div>
+                        <div class="sign_up"><a href="#" onclick="goUrl('signup')">회원가입</a></div>
+                    </div>
+                    <!-- unsigned -->
+                    <div class="signed hidden">
+                        <div class="dropdown">
+                            <div class="dropdown_button">
+                                안녕하세요 <span class="nickname">홍길동</span>님
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                            <!-- dropdown_button -->
+                            <div class="dropdown_content">
+                                <button id="sign_out">로그아웃</button>
+                            </div>
+                            <!-- dropdownn_content -->
+                        </div>
+                        <!-- dropdown -->
+                    </div>
+                    <!-- signed -->
+                </div>
+                <!-- sign_container -->
+            </div>
+            <!-- header_container -->
+        </div>
+    </header>
+
+    <main>
+        <div class="inner">
+            <div class="jumbotron_container">
+                <div class="jumbotron_item_main">
+                    <div class="jumbotron_item_main_message">
+                        <p>내시간을 제대로 쓰고 싶다면,</p>
+                        <h1>아이젠하워 메트릭스</h1>
+                    </div>
+                    <div class="jumbotron_item_main_image"></div>
+                </div>
+                <!-- jumbotron_item_main -->
+                <div class="jumbotron_item_sub">
+                    <p>긴급성과 중요도를 기준으로 시간관리를 하고,</p>
+                    <p>일의 우선순위를 배문하는 방법입니다. </p>
+                </div>
+                <!-- jumbotron_item_sub -->
+            </div>
+            <!-- jumbotron_container -->
+
+            <div class="matrix_container">
+                <div class="matrix_item" id="decide">
+                    <div class="matrix_item_header">
+                        <div class="matrix_title">📅 계획을 세워서 해야할 일</div>
+                        <input type="text" class="matrix_input" placeholder="입력 후 Enter를 눌러주셔요.">
+                    </div>
+                    <!-- matrix_item_header -->
+                    <ul class="matrix_item_list">
+                    </ul>
+                    <!-- matrix_item_list -->
+                </div>
+                <!-- matrix_item decide -->
+                <div class="matrix_item" id="do">
+                    <div class="matrix_item_header">
+                        <div class="matrix_title">🏃🏃 지금 해야할 일</div>
+                        <input type="text" class="matrix_input" placeholder="입력 후 Enter를 눌러주셔요.">
+                    </div>
+                    <!-- matrix_item_header -->
+                    <ul class="matrix_item_list">
+                    </ul>
+                    <!-- matrix_item_list -->
+                </div>
+                <!-- matrix_item do -->
+                <div class="matrix_item" id="delegate">
+                    <div class="matrix_item_header">
+                        <div class="matrix_title">🏦 급하지만 중요도가 낮은일</div>
+                        <input type="text" class="matrix_input" placeholder="입력 후 Enter를 눌러주셔요.">
+                    </div>
+                    <!-- matrix_item_header -->
+                    <ul class="matrix_item_list">
+                    </ul>
+                    <!-- matrix_item_list -->
+                </div>
+                <!-- matrix_item delegate -->
+                <div class="matrix_item" id="delete">
+                    <div class="matrix_item_header">
+                        <div class="matrix_title">🏌 최후순위</div>
+                        <input type="text" class="matrix_input" placeholder="입력 후 Enter를 눌러주셔요.">
+                    </div>
+                    <!-- matrix_item_header -->
+                    <ul class="matrix_item_list">
+                    </ul>
+                    <!-- matrix_item_list -->
+                </div>
+                <!-- matrix_item delete -->
+                <span class="importance">중요도</span>
+                <span class="urgency">긴급성</span>
+            </div>
+            <!-- matrix_container -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="inner">
+            <div class="footer_container">
+                <div class="author">개발자 : 홍길동</div>
+                <div class="author_email">demmey@demmey.com</div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js" integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/btlink.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/todo.js"></script>
+</body>
+</html>
